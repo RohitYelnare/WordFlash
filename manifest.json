@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Word Flash",
+    "version": "0.1.0",
+    "content_scripts": [
+        {
+        "matches": [
+            "<all_urls>"
+        ],
+            "js": ["./content.js"]
+        }
+    ],
+    "permissions": ["tabs"],
+    "background": {
+        "scripts": ["./background.js"]
+    },
+    "browser_action": {
+        "default_popup": "./popup.html",
+        "default_title": "Lookup a definition"
+    }
+}
